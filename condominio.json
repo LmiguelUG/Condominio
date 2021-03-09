@@ -1,0 +1,17 @@
+{
+    "fields": [
+        {
+            "name": "nombre",
+            "type": "string"
+        },
+        {
+            "name":"direccion",
+            "type":"string"
+        },
+        {
+            "name":"logo",
+            "type":"file"
+        }
+    ]
+
+}

@@ -1,0 +1,31 @@
+{
+    "fields": [
+        {
+            "name": "idinquilino",
+            "type": "integer#unsigned"
+        },
+        {
+          "name":"idcontrato",
+          "type":"integer#unsigned"
+        },
+        {
+          "name":"idalquiler",
+          "type":"integer#unsigned"
+        }
+    ],
+    "foreign_keys":[
+      {
+          "column": "idcontrato",
+          "references": "id",
+          "on": "contratos",
+          "onDelete": "cascade"
+      },
+      {
+          "column": "idinmueble",
+          "references": "id",
+          "on": "inmuebles",
+          "onDelete": "cascade"
+      }
+    ]
+
+}

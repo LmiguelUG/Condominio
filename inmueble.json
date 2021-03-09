@@ -1,0 +1,18 @@
+{
+    "fields": [
+        {
+            "name": "tipo",
+            "type": "select",
+            "options":{
+              "apartamento":"Apartamento",
+              "casa":"Casa",
+              "local":"Local"
+            }
+        },
+        {
+            "name":"alicuota",
+            "type":"float"
+        }
+    ]
+
+}

@@ -1,0 +1,37 @@
+{
+    "fields": [
+        {
+            "name": "idpropietario",
+            "type": "integer#unsigned"
+        },
+        {
+            "name":"idcontrato",
+            "type":"integer#unsigned"
+        },
+        {
+            "name":"idalquiler",
+            "type":"integer#unsigned"
+        }
+    ],
+    "foreign_keys":[
+      {
+          "column": "idpropietario",
+          "references": "id",
+          "on": "propietarios",
+          "onDelete": "cascade"
+      },
+      {
+          "column": "idcontrato",
+          "references": "id",
+          "on": "contratos",
+          "onDelete": "cascade"
+      },
+      {
+          "column": "idalquiler",
+          "references": "id",
+          "on": "alquilers",
+          "onDelete": "cascade"
+      }
+    ]
+
+}

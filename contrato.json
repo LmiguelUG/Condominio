@@ -1,0 +1,50 @@
+{
+    "fields": [
+        {
+            "name": "tipo",
+            "type": "select",
+            "options":{
+              "abierto":"Factura"
+            }
+        },
+        {
+          "name":"detalle",
+          "type":"string"
+        },
+        {
+          "name":"monto",
+          "type":"float"
+        },
+        {
+          "name":"saldo",
+          "type":"float"
+        },
+        {
+          "name":"fecha",
+          "type":"date"
+        },
+        {
+          "name":"idcontrato",
+          "type":"integer#unsigned"
+        },
+        {
+          "name":"idinmueble",
+          "type":"integer#unsigned"
+        }
+    ],
+    "foreign_keys":[
+      {
+          "column": "idcontrato",
+          "references": "id",
+          "on": "contratos",
+          "onDelete": "cascade"
+      },
+      {
+          "column": "idinquilino",
+          "references": "id",
+          "on": "inquilinos",
+          "onDelete": "cascade"
+      }
+    ]
+
+}

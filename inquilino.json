@@ -1,0 +1,17 @@
+{
+    "fields": [
+        {
+            "name": "idcondominio",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys":[
+      {
+          "column": "idcondominio",
+          "references": "id",
+          "on": "condominios",
+          "onDelete": "cascade"
+      }
+    ]
+
+}

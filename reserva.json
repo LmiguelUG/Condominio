@@ -1,0 +1,43 @@
+{
+    "fields": [
+        {
+            "name": "status",
+            "type": "select",
+            "options":{
+              "abierto":"Abierto",
+              "cerrado":"Cerrado"
+            }
+        },
+        {
+          "name":"idinmueble",
+          "type":"integer#unsigned"
+        },
+        {
+          "name":"idinquilino",
+          "type":"integer#unsigned"
+        },
+        {
+          "name":"desde",
+          "type":"date"
+        },
+        {
+          "name":"hasta",
+          "type":"date"
+        }
+    ],
+    "foreign_keys":[
+      {
+          "column": "idinmueble",
+          "references": "id",
+          "on": "inmuebles",
+          "onDelete": "cascade"
+      },
+      {
+          "column": "idinquilino",
+          "references": "id",
+          "on": "inquilinos",
+          "onDelete": "cascade"
+      }
+    ]
+
+}
